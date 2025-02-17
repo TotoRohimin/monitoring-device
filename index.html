@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Statistika dengan Supabase</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Statistika Device Data</h1>
+
+      <!-- Card Container -->
+      <div class="card-container">
+        <div class="card" id="ph-card">
+          <h2>pH</h2>
+          <p id="ph-value">0.00</p>
+        </div>
+        <div class="card" id="temperature-card">
+          <h2>Temperature</h2>
+          <p id="temperature-value">0.00</p>
+        </div>
+        <div class="card" id="tds-card">
+          <h2>TDS</h2>
+          <p id="tds-value">0.00</p>
+        </div>
+        <div class="card" id="status-card">
+          <h2>Status</h2>
+          <p id="water-status">Belum Tersedia</p>
+        </div>
+      </div>
+
+      <!-- Chart -->
+      <canvas id="deviceChart" width="400" height="300"></canvas>
+
+      <!-- Table -->
+      <table>
+        <thead>
+          <tr>
+            <th>Timestamp</th>
+            <th>pH</th>
+            <th>Temperature</th>
+            <th>TDS</th>
+          </tr>
+        </thead>
+        <tbody id="data-table">
+          <!-- Data akan diisi dari JavaScript -->
+        </tbody>
+      </table>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
